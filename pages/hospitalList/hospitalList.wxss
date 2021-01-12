@@ -1,0 +1,182 @@
+page {
+  background: #eeeeee;
+}
+
+.search {
+  width: 100%;
+  height: 90rpx;
+  background: #1d7bae;
+  position: fixed;
+  display: flex;
+}
+
+.search .search_l {
+  flex: 1;
+  color: #ffffff;
+  text-align: center;
+  line-height: 90rpx;
+  font-size: 28rpx;
+}
+
+.search .search_r {
+  flex: 3;
+  padding: 18rpx 18rpx;
+  box-sizing: border-box;
+}
+
+.search_r .search_content {
+  width: 100%;
+  height: 54rpx;
+  background: #ffffff;
+  border-radius: 27rpx;
+  text-align: center;
+  line-height: 54rpx;
+  font-size: 24rpx;
+  color: #888888;
+}
+
+.container {
+  padding: 20rpx 20rpx 0 20rpx;
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 110rpx;
+}
+
+.container .hospital_item {
+  width: 100%;
+  height: 210rpx;
+  background: #fff;
+  border-radius: 10rpx;
+  margin-bottom: 10rpx;
+  padding: 10rpx;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.hospital_item .item_l {
+  flex: 3;
+}
+
+.item_l image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 10rpx;
+}
+
+.hospital_item .item_r {
+  flex: 5;
+  padding: 10rpx 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.item_r .title {
+  font-size: 28rpx;
+  font-weight: bold;
+}
+
+.item_r .addr {
+  font-size: 24rpx;
+  color: #888888;
+}
+
+.label_body {
+  margin-top: 20rpx;
+  display: flex;
+}
+
+.label_body .label {
+  font-size: 24rpx;
+  background: #1d7bae;
+  color: #ffffff;
+  width: 120rpx;
+  height: 44rpx;
+  border-radius: 22rpx;
+  text-align: center;
+  line-height: 44rpx;
+  margin-right: 16rpx;
+}
+
+.line1 {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.loadmore {
+  color: #888;
+  font-size: 30rpx;
+  line-height: 100rpx;
+  text-align: center;
+}
+
+/* 弹出框 */
+.modal {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 680rpx;
+  background: #ffffff;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.modal_header {
+  width: 100%;
+  height: 90rpx;
+  background: #1d7bae;
+  display: flex;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+
+.item1 {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.item1 image {
+  width: 48rpx;
+}
+
+.item2 {
+  flex: 3;
+  color: #ffffff;
+  text-align: center;
+  line-height: 90rpx;
+}
+
+.modal_body {
+  padding: 20rpx;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.modal_body .btn {
+  margin-top: 370rpx;
+}
+
+/*动画前初始位置*/
+.bottom-positon {
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+}
+
+.modal_cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .8);
+  z-index: 5;
+}

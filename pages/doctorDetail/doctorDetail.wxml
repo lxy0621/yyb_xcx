@@ -1,0 +1,23 @@
+<view class="container">
+  <view class="doctor_message">
+    <view class="top_message">
+      <view class="name">
+        <view class="doctor_name">{{ doctorDetail.Name }}</view>
+        <view class="doctor_title">{{ doctorDetail.qualificationId }}</view>
+      </view>
+      <view class="avatar">
+        <image mode="widthFix" wx:if="{{ doctorDetail.photoFile.length != 0 }}" src="{{ doctorDetail.photoFile }}">
+        </image>
+        <image wx:else src="../../assets/noavatar.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class="bottom_message">
+    <view class="title">医生简介</view>
+    <view class="vice_title">擅长</view>
+    <view class="goodAt">{{ professionalSkill }}</view>
+    <view class="vice_title">简历</view>
+    <view class="resume">{{ dutyDescribe }}</view>
+  </view>
+</view>
+<navigator class="order" url="/pages/order/order">预约会诊</navigator>

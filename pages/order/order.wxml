@@ -1,0 +1,134 @@
+<scroll class="tab-h">
+  <block wx:for="{{ tabs }}" wx:key='*this'>
+    <view class="tab-item {{currentTab==item.id?'active':''}}" data-current="{{ item.id }}" bindtap="swichNav">
+      {{ item.title }}</view>
+  </block>
+</scroll>
+<swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab"
+  style="height:{{winHeight}}rpx">
+  <swiper-item>
+    <scroll-view scroll-y="true" class="scoll-h">
+      <view class="ordinary">
+        <form bindsubmit="bindSubmit" class="bindContent">
+          <!-- 所在地 -->
+          <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}"
+            name="localtion">
+            <view class="picker">
+              <text decode="{{true}}">所&ensp;在&ensp;地：</text>{{region[0]}}-{{region[1]}}-{{region[2]}}
+            </view>
+          </picker>
+          <!-- 姓名 -->
+          <view class="name">
+            <text class="title" decode="{{true}}">姓&ensp;&ensp;&ensp;&ensp;名：</text>
+            <input class="weui-input" name="name" maxlength="10" placeholder="请输入姓名" />
+          </view>
+          <!-- 出生日期 -->
+          <picker mode="date" value="{{date}}" start="1900-01-01" bindchange="bindDateChange" class="birthday"
+            name="birthday">
+            <view class="picker">
+              <text>出生日期：</text>{{date}}
+            </view>
+          </picker>
+          <!-- 性别 -->
+          <picker bindchange="bindGenderChange" value="{{index}}" range="{{gender}}" name="gender">
+            <view class="picker">
+              <text decode="{{true}}">性&ensp;&ensp;&ensp;&ensp;别：</text>{{ gender[idx_1] }}
+            </view>
+          </picker>
+          <!-- 证件类型 -->
+          <picker bindchange="bindcardTypeChange" value="{{index}}" range="{{cardType}}" name="cardType">
+            <view class="picker">
+              <text decode="{{true}}">证件类型：</text>{{ cardType[idx_2] }}
+            </view>
+          </picker>
+          <!-- 证件号码 -->
+          <view class="identNumb">
+            <text class="title" decode="{{true}}">证件号码：</text>
+            <input class="weui-input" type="number" name="identNumb" maxlength="16" placeholder="请输入证件号码" />
+          </view>
+          <!-- 手机号码 -->
+          <view class="telNumb">
+            <text class="title" decode="{{true}}">手机号码：</text>
+            <input class="weui-input" type="number" name="telNumb" maxlength="11" placeholder="请输入手机号码" />
+          </view>
+          <!-- 验证码 -->
+          <view class="code">
+            <view class="code_l">
+              <text class="title" decode="{{true}}">验&ensp;证&ensp;码：</text>
+              <input class="weui-input" type="number" name="code" maxlength="9" />
+            </view>
+            <view class="code_r">获取验证码</view>
+          </view>
+          <!-- 希望会诊时间 -->
+          <view class="time">
+            <view class="title">希望会诊时间：</view>
+            <view class="radio">
+              <radio-group bindchange="radioChange" class="radio_item" name="time">
+                <label class="weui-cell weui-check__label" wx:for="{{times}}" wx:key="value">
+                  <view class="weui-cell__hd">
+                    <radio value="{{item.value}}" checked="true" />
+                  </view>
+                  <view class="weui-cell__bd">{{item.name}}</view>
+                </label>
+              </radio-group>
+            </view>
+          </view>
+          <!-- 病情描述 -->
+          <view class="illnessDesc">
+            <view class="title">病情描述：</view>
+            <textarea maxlength='140' name="illnessDesc" placeholder="请填写您的患病信息，及预约需求信息" />
+            </view>
+      <view class="btn">
+        <button form-type="submit" class="submit" style="width:100%;color:#ffffff;background:#1d7bae;">预约会诊</button>
+      </view>
+    </form>
+      </view>
+    </scroll-view>
+  </swiper-item>
+  <swiper-item>
+    <scroll-view scroll-y="true" class="scoll-h">
+      <view class="fast">
+    <form bindsubmit="bindSubmit2" class="bindContent">
+    <!-- 所在地 -->
+      <picker mode="region" bindchange="bindRegion2Change" value="{{region2}}" custom-item="{{customItem2}}" name="localtion">
+        <view class="picker">
+          <text decode="{{true}}">所&ensp;在&ensp;地：</text>{{region2[0]}}-{{region2[1]}}-{{region2[2]}}
+        </view>
+      </picker>
+      <!-- 联系人 -->
+      <view class="name">
+        <text class="title" decode="{{true}}">联&ensp;系&ensp;人：</text>
+        <input class="weui-input" name="name" maxlength="10" placeholder="请输入联系人姓名" />
+      </view>
+      <!-- 手机号码 -->
+      <view class="telNumb">
+        <text class="title" decode="{{true}}">手机号码：</text>
+        <input class="weui-input" type="number" name="telNumb" maxlength="11" placeholder="请输入手机号码" />
+      </view>
+      <!-- 期望会诊时间 -->
+      <view class="time">
+        <view class="title">希望会诊时间：</view>
+        <view class="radio">
+          <radio-group bindchange="radioChange2" class="radio_item" name="time">
+            <label class="weui-cell weui-check__label" wx:for="{{times2}}" wx:key="value">
+              <view class="weui-cell__hd">
+                <radio value="{{item.value}}" checked="true" />
+              </view>
+              <view class="weui-cell__bd">{{item.name}}</view>
+            </label>
+          </radio-group>
+        </view>
+      </view>
+      <!-- 病情描述 -->
+      <view class="illnessDesc">
+        <view class="title">病情描述：</view>
+        <textarea maxlength='140' name="illnessDesc" placeholder="请填写您的患病信息，及预约需求信息" />
+      </view>
+      <view class="btn">
+        <button form-type="submit" class="submit" style="width:100%;color:#ffffff;background:#1d7bae;">快速预约</button>
+      </view>
+    </form>
+  </view>
+    </scroll-view>
+  </swiper-item>
+</swiper>

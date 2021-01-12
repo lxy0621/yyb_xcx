@@ -1,0 +1,44 @@
+<view class="search">
+  <view class="search_content iconfont icon-magnifier" bindtap="searchDoctor">搜索医师</view>
+</view>
+<view class="container">
+  <block wx:for="{{ doctorList }}" wx:key='id'>
+    <navigator class="doctor_item" url="/pages/doctorDetail/doctorDetail?id={{ item.id }}">
+      <view class="item_l">
+        <image wx:if="{{ item.photoFile.length != 0 }}" src="{{ item.photoFile }}"></image>
+        <image wx:else src="../../assets/noavatar.png"></image>
+      </view>
+      <view class="item_r">
+        <view class="name">{{ item.name }}<span>{{ item.qualificationId }}</span></view>
+        <view class="sex">{{ item.SexId }} {{ item.NationId }}</view>
+        <view class="resume">{{ item.hospital }}</view>
+      </view>
+    </navigator>
+  </block>
+</view>
+<view wx:if='{{ hasMore }}' class="loadmore loading">正在加载...</view>
+<view wx:else class="loadmore">暂无更多医师信息</view>
+<!-- 弹出框 -->
+<view class="modal bottom-positon" hidden="{{ searchModal }}" data-modal='modal' bindtap="outModal"
+  animation="{{animationData}}">
+  <view class="modal_header">
+    <view class="item1"></view>
+    <view class="item2">医师搜索</view>
+    <view class="item1" bindtap="closeModal">
+      <image mode="widthFix" src="../../assets/close.png"></image>
+    </view>
+  </view>
+  <view class="modal_body">
+    <form bindsubmit="bindSubmit" class="search_form">
+      <view class="search_name">
+        <input name="name" placeholder="请输入医生姓名" style="border: 2rpx solid #cccccc;padding:16rpx;box-size:border-box;border-radius:10rpx"/>
+      </view>
+      <view class="btn">
+        <button form-type="submit" class="submit"
+          style="width:100%;color:#ffffff;background:#1d7bae;font-weight:normal;">搜索</button>
+      </view>
+    </form>
+  </view>
+</view>
+<!-- 遮罩层 -->
+<view class="modal_cover" hidden="{{ searchModal }}" bindtap="outModal"></view>

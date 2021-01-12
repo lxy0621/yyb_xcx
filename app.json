@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/diagnose/diagnose",
+    "pages/education/education",
+    "pages/news/news",
+    "pages/self/self",
+    "pages/newsCenter/newsCenter",
+    "pages/hospitalList/hospitalList",
+    "pages/hospitalDetail/hospitalDetail",
+    "pages/doctor/doctor",
+    "pages/doctorDetail/doctorDetail",
+    "pages/order/order",
+    "pages/departmentDetail/departmentDetail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "云医宝",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#46b8f5",
+    "borderStyle": "white",
+    "list": [{
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "./assets/index_icon.png",
+        "selectedIconPath": "./assets/index_active_icon.png"
+      },
+      {
+        "pagePath": "pages/diagnose/diagnose",
+        "text": "会诊",
+        "iconPath": "./assets/dia_icon.png",
+        "selectedIconPath": "./assets/dia_active_icon.png"
+      },
+      {
+        "pagePath": "pages/education/education",
+        "text": "教育",
+        "iconPath": "./assets/edu_icon.png",
+        "selectedIconPath": "./assets/edu_active_icon.png"
+      },
+      {
+        "pagePath": "pages/news/news",
+        "text": "消息",
+        "iconPath": "./assets/news_icon.png",
+        "selectedIconPath": "./assets/news_active_icon.png"
+      },
+      {
+        "pagePath": "pages/self/self",
+        "text": "个人",
+        "iconPath": "./assets/self_icon.png",
+        "selectedIconPath": "./assets/self_active_icon.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

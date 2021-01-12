@@ -1,0 +1,21 @@
+<view class="container">
+  <!-- swiper -->
+  <swiper indicator-color="rgba(255, 255, 255, .3)" indicator-active-color="#ffffff"
+    indicator-dots="{{true}}" autoplay="{{true}}" circular="{{true}}" interval="{{3000}}" duration="{{1000}}">
+    <swiper-item>
+      <image src="../../assets/banner_1.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="../../assets/banner_2.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="../../assets/banner_3.jpg"></image>
+    </swiper-item>
+  </swiper>
+  <!-- function -->
+  <view class="function">
+    <block>
+      <view class="function_item"></view>
+    </block>
+  </view>
+</view>

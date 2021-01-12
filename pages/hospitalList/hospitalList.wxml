@@ -1,0 +1,51 @@
+<view class="search">
+  <view class="search_l .iconfont .icon-location"> 呼和浩特</view>
+  <view class="search_r">
+    <view class="search_content iconfont icon-magnifier" bindtap="searchHospital">搜索</view>
+  </view>
+</view>
+<view class="container">
+  <block wx:for='{{ hosptitalList }}' wx:key='id'>
+    <navigator class="hospital_item" url="/pages/hospitalDetail/hospitalDetail?id={{ item.id }}">
+      <view class="item_l">
+        <image wx:if="{{item.photo.length != 0}}" src="{{ item.photo }}" alt=""></image>
+        <image wx:else src="../../assets/nopic.jpg" alt=""></image>
+      </view>
+      <view class="item_r">
+        <view class="title">{{ item.OrganName }}</view>
+        <view class="addr line1">{{ item.addr }}</view>
+        <view class="label_body">
+          <view class="label">{{ item.Grade1Name }}{{ item.Grade2Name }}</view>
+          <view class="label">{{ item.NatureName }}</view>
+        </view>
+      </view>
+    </navigator>
+  </block>
+  <view wx:if='{{ hasMore }}' class="loadmore loading">正在加载...</view>
+  <view wx:else class="loadmore">暂无更多医院信息</view>
+</view>
+<!-- 弹出框 -->
+<view class="modal bottom-positon" hidden="{{ searchModal }}" data-modal='modal' bindtap="outModal"
+  animation="{{animationData}}">
+  <view class="modal_header">
+    <view class="item1"></view>
+    <view class="item2">医疗机构搜索</view>
+    <view class="item1" bindtap="closeModal">
+      <image mode="widthFix" src="../../assets/close.png"></image>
+    </view>
+  </view>
+  <view class="modal_body">
+    <form bindsubmit="bindSubmit" class="search_form">
+      <view class="search_name">
+        <input name="name" placeholder="请输入医院信息"
+          style="border: 2rpx solid #cccccc;padding:16rpx;box-size:border-box;border-radius:10rpx" />
+      </view>
+      <view class="btn">
+        <button form-type="submit" class="submit"
+          style="width:100%;color:#ffffff;background:#1d7bae;font-weight:normal;">搜索</button>
+      </view>
+    </form>
+  </view>
+</view>
+<!-- 遮罩层 -->
+<view class="modal_cover" hidden="{{ searchModal }}" bindtap="outModal"></view>

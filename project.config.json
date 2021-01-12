@@ -1,0 +1,110 @@
+{
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": false,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "enableEngineNative": false,
+    "bundle": false,
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true,
+    "useApiHostProcess": false
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.14.1",
+  "appid": "wx273d4a4109b76ee3",
+  "projectname": "miniprogram-1",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "scripts": {},
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "self",
+          "pathName": "pages/self/self",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "hospitalList",
+          "pathName": "pages/hospitalList/hospitalList",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "order",
+          "pathName": "pages/order/order",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "test",
+          "pathName": "pages/test/test",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "diagnose",
+          "pathName": "pages/diagnose/diagnose",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "departmentDetail",
+          "pathName": "pages/departmentDetail/departmentDetail",
+          "query": "departmentId=26ec969a-c88e-4e25-ba7a-c1cb03455971&departmentName=神经内科",
+          "scene": null
+        },
+        {
+          "name": "doctor",
+          "pathName": "pages/doctor/doctor",
+          "query": "id=548f5c44-338a-46ae-a375-49a932d27539",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

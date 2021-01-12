@@ -1,0 +1,85 @@
+<view class="container">
+  <view class="top">
+    <!-- search -->
+    <view class="search">
+      <view class="search_l">
+        <view class="iconfont .icon-location">呼和浩特</view>
+      </view>
+      <view class="search_r">
+        <view class="iconfont icon-magnifier">搜索</view>
+      </view>
+    </view>
+    <!-- Banner -->
+    <swiper class="bannerSwiper" indicator-color="rgba(255, 255, 255, .3)" indicator-active-color="#ffffff"
+      indicator-dots="{{true}}" autoplay="{{true}}" circular="{{true}}" interval="{{3000}}" duration="{{1000}}">
+      <swiper-item>
+        <image src="../../assets/banner1.png"></image>
+      </swiper-item>
+      <swiper-item>
+        <image src="../../assets/banner2.png"></image>
+      </swiper-item>
+      <swiper-item>
+        <image src="../../assets/banner3.png"></image>
+      </swiper-item>
+      <swiper-item>
+        <image src="../../assets/banner4.png"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- function -->
+  <view class="function">
+    <view class="function_item">
+      <image src="../../assets/function_1.png" alt=""></image>
+      <view>在线问诊</view>
+    </view>
+    <view class="function_item">
+      <image src="../../assets/function_2.png" alt=""></image>
+      <view>远程医疗</view>
+    </view>
+    <navigator class="function_item" url="/pages/hospitalList/hospitalList">
+      <image src="../../assets/function_3.png" alt=""></image>
+      <view>远程会诊</view>
+    </navigator>
+    <view class="function_item">
+      <image src="../../assets/function_4.png" alt=""></image>
+      <view>找医生</view>
+    </view>
+  </view>
+  <!-- tabs -->
+  <view class="tabs">
+    <scroll class="tab-h">
+      <block wx:for="{{ tabs }}" wx:key='id'>
+        <view class="tab-item {{currentTab==item.id?'active':''}}" data-current="{{ item.id }}" bindtap="swichNav">
+          {{ item.title }}</view>
+      </block>
+    </scroll>
+    <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab"
+      style="height:{{winHeight}}rpx">
+      <swiper-item>
+        <scroll-view scroll-y="true" class="scoll-h news_content">
+          <block wx:for="{{ news }}" wx:key='id'>
+            <navigator class="news_item"
+              url="/pages/newsCenter/newsCenter?title={{ item.title }}&author={{ item.author }}&content={{ item.content }}&time={{ item.time }}">
+              <view class="item_l">
+                <image src="../../assets/news_pic.jpg" alt=""></image>
+              </view>
+              <view class="item_r">
+                <view class="title">{{ item.title }}</view>
+                <view class="time">{{ item.author }} | <span>{{ item.time }}</span></view>
+              </view>
+            </navigator>
+          </block>
+        </scroll-view>
+      </swiper-item>
+      <swiper-item>
+        <scroll-view scroll-y="true" class="scoll-h">2</scroll-view>
+      </swiper-item>
+      <swiper-item>
+        <scroll-view scroll-y="true" class="scoll-h">3</scroll-view>
+      </swiper-item>
+      <swiper-item>
+        <scroll-view scroll-y="true" class="scoll-h">4</scroll-view>
+      </swiper-item>
+    </swiper>
+  </view>
+</view>

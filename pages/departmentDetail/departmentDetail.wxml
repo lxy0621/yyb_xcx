@@ -1,0 +1,19 @@
+<view class="container">
+  <view class="header">
+    <image mode="widthFix" src="../../assets/detail_bg.jpg" alt=""></image>
+    <view class="title">-{{ departmentName }}-</view>
+  </view>
+  <view class="content" wx:if="{{ departmentDetail.length !=0 }}">
+    <view class="title">二级科室</view>
+    <block wx:for="{{ departmentDetail }}" wx:key='id'>
+      <navigator url="/pages/doctor/doctor?id={{ item.id }}" class="department_content">
+        <view>{{ item.name }}</view>
+        <view class="right_icon iconfont icon-jinru"></view>
+      </navigator>
+    </block>
+  </view>
+  <view wx:else class="noData">
+    <view class="title">二级科室</view>
+    <view class="word">暂无数据</view>
+  </view>
+</view>

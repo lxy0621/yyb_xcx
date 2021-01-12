@@ -1,0 +1,21 @@
+.tabs {
+  height: 80rpx;
+  border-top-left-radius: 10rpx;
+  border-top-right-radius: 10rpx;
+  display: flex;
+  background: #fff;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.tabs .tabs-item {
+  flex: 1;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 28rpx;
+}
+
+.tabs .tabs-item.active {
+  border-bottom: 4rpx solid #46b8f5;
+  color: #46b8f5;
+}
+

@@ -1,0 +1,9 @@
+<view class="container">
+  <view class="header">
+    <image src="../../assets/self_bg.jpg"></image>
+    <view class="avatar">
+      <!-- <view class="avator"></view> -->
+    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" plain="{{ true }}">获取用户权限</button>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,28 @@
+page {
+  background: #eee;
+}
+
+.container {
+  width: 100%;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.new_content {
+  width: 100%;
+  background: #ffffff;
+  padding: 20rpx;
+  box-sizing: border-box;
+  border-radius: 10rpx;
+}
+.new_content .title {
+  font-weight: bold;
+}
+.new_content .desc {
+  margin-top: 20rpx;
+  font-size: 24rpx;
+}
+.new_content .content {
+  margin-top: 40rpx;
+  font-size: 24rpx;
+}

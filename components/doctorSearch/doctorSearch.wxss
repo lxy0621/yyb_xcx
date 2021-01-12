@@ -1,0 +1,102 @@
+/* modal样式 */
+
+.modal-box {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-card {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 800rpx;
+  background: #fff;
+  border-top-left-radius: 12rpx;
+  border-top-right-radius: 12rpx;
+  overflow: hidden;
+  z-index: 300;
+}
+
+.title {
+  width: 100%;
+  height: 88rpx;
+  background: #1d7bae;
+}
+
+.title .cloose {
+  margin-left: calc(100% - 88rpx);
+  width: 88rpx;
+  height: 88rpx;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title .cloose image{
+  display: block;
+  width: 48rpx;
+  height: 48rpx;
+}
+.card_body {
+  padding: 10rpx;
+  box-sizing: border-box;
+  z-index: 298;
+}
+
+.type {
+  margin-top: 10rpx;
+  height: 300rpx;
+  background: #ccc;
+}
+
+.getNow {
+  height: 100rpx;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+
+.getNow view {
+  width: 100%;
+  height: 80rpx;
+  background: #1d7bae;
+  border-radius: 12rpx;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-cover {
+  width: 100%;
+  background-color: #242424;
+  opacity: 0.5;
+  z-index: 299;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  overflow: hidden;
+}
+.search_name{
+  background: #ccc;
+  font-size: 24rpx;
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 10rpx;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+  margin-bottom: 10rpx;
+}
